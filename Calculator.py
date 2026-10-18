@@ -1,14 +1,7 @@
 import tkinter as tk
 # creating tk window
 window = tk.Tk()
-
-#creating all labels
-title = tk.Label(
-    text="Super Calculator",
-    width=20,
-    bg= 'red',
-    fg= 'white')
-#title.pack()
+window.title("calculator")
 
 #creating all buttons
 b1 = tk.Button(
@@ -26,16 +19,16 @@ for i in range(4):
         frame = tk.Frame(
             master=window,
             relief = tk.RIDGE,
-            borderwidth=5)
+            borderwidth=2)
         num += 1
-        frame.grid(row = i, column = j)
-        button = tk.Button(master = frame, text = f'space{num}')
-        button.pack()
+        frame.grid(row = i, column = j, padx= 5, pady=5)
+        button = tk.Button(relief = tk.RIDGE, master = frame, text = f'space {num}')
+        button.pack(padx= 5, pady=5)
 
 window.mainloop()
 
 
-print("Calculator")
+print("it worked!")
 '''def addition(a, b):
     return a+b
 def subtraction(a, b):
