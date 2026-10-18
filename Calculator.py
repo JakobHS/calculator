@@ -42,7 +42,7 @@ b4 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'gray'
 )
 b5 = tk.Button(
     text="4",
@@ -78,7 +78,7 @@ b8 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'gray'
 )
 b9 = tk.Button(
     text="7",
@@ -114,7 +114,7 @@ b12 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'gray'
 )
 b13 = tk.Button(
     text=".",
@@ -123,7 +123,7 @@ b13 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'gray'
 )
 b14 = tk.Button(
     text="0",
@@ -141,7 +141,7 @@ b15 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'orange'
 )
 b16 = tk.Button(
     text="/",
@@ -150,8 +150,16 @@ b16 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'gray'
 )
+
+labelmain = tk.Label(
+    text = 'jekfsef',
+    width= 32,
+    relief= tk.SUNKEN,
+    height= 4
+)
+labelmain.pack()
 
 buttons_dics = {1:b1, 2:b2, 3:b3, 4:b4, 5:b5, 6:b6, 7:b7, 8:b8, 9:b9, 10:b10, 11:b11, 12:b12, 13:b13, 14:b14, 15:b15, 16:b16}
 
