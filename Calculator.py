@@ -3,9 +3,6 @@ import tkinter as tk
 window = tk.Tk()
 window.title("calculator")
 
-def handle_click(text):
-    print(text)
-
 Screen = tk.Frame(
     master = window,
     borderwidth= 5
@@ -18,8 +15,9 @@ frame = tk.Frame(
 )
 frame.pack()
 
+
 labelmain = tk.Label(
-    text = 'jekfsef',
+    text = '',
     master = Screen,
     width= 15,
     relief= tk.SUNKEN,
@@ -29,6 +27,12 @@ labelmain = tk.Label(
     font = ('Arial', 17)
 )
 labelmain.pack()
+
+def handle_click(text):
+    if text == 'ans':
+        labelmain['text'] = 'solving...'
+    else:
+        labelmain['text'] = labelmain['text'] + text
 
 labels = ['1', '2', '3', '+',
           '4', '5', '6', '-',
