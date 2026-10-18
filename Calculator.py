@@ -1,5 +1,31 @@
+import tkinter as tk
+# creating tk window
+window = tk.Tk()
+
+#creating all labels
+title = tk.Label(
+    text="Super Calculator",
+    width=20,
+    bg= 'red',
+    fg= 'white')
+title.pack()
+
+#creating all buttons
+b1 = tk.Button(
+    text="1",
+    height= 3,
+    width= 5,
+    borderwidth=5,
+    relief= tk.RIDGE,
+    bg= 'white'
+)
+b1.pack()
+
+window.mainloop()
+
+
 print("Calculator")
-def addition(a, b):
+'''def addition(a, b):
     return a+b
 def subtraction(a, b):
     return a-b
@@ -19,3 +45,4 @@ if equ == "*":
     print(multiplication(a, b))
 if equ == "/":
     print(division(a, b))
+'''
