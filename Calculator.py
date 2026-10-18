@@ -6,13 +6,16 @@ window.title("calculator")
 def handle_click(event):
     print(button['text'])
 
-
-
 Screen = tk.Frame(
     master = window,
     borderwidth= 5
 )
 Screen.pack()
+
+labels = ['1', '2', '3', '+',
+          '4', '5', '6', '-',
+          '7', '8', '9', '*',
+          '.', '0', 'ans', '/']
 
 labelmain = tk.Label(
     text = 'jekfsef',
