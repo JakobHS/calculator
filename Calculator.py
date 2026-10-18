@@ -8,7 +8,7 @@ title = tk.Label(
     width=20,
     bg= 'red',
     fg= 'white')
-title.pack()
+#title.pack()
 
 #creating all buttons
 b1 = tk.Button(
@@ -19,7 +19,18 @@ b1 = tk.Button(
     relief= tk.RIDGE,
     bg= 'white'
 )
-b1.pack()
+#b1.pack()
+num = 0
+for i in range(4):
+    for j in range(4):
+        frame = tk.Frame(
+            master=window,
+            relief = tk.RIDGE,
+            borderwidth=5)
+        num += 1
+        frame.grid(row = i, column = j)
+        button = tk.Button(master = frame, text = f'space{num}')
+        button.pack()
 
 window.mainloop()
 
