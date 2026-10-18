@@ -3,6 +3,30 @@ import tkinter as tk
 window = tk.Tk()
 window.title("calculator")
 
+def handle_click(event):
+    print(button['text'])
+
+
+
+Screen = tk.Frame(
+    master = window,
+    borderwidth= 5
+)
+Screen.pack()
+
+labelmain = tk.Label(
+    text = 'jekfsef',
+    master = Screen,
+    width= 15,
+    relief= tk.SUNKEN,
+    height= 2,
+    anchor = 'e',
+    padx= 10,
+    font = ('Arial', 17)
+)
+labelmain.pack()
+
+
 frame = tk.Frame(
     master=window,
     borderwidth=2)
@@ -15,7 +39,8 @@ b1 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b2 = tk.Button(
     text="2",
@@ -24,7 +49,8 @@ b2 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b3 = tk.Button(
     text="3",
@@ -33,7 +59,8 @@ b3 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b4 = tk.Button(
     text="+",
@@ -42,7 +69,8 @@ b4 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'gray'
+    bg= 'gray',
+    command = handle_click
 )
 b5 = tk.Button(
     text="4",
@@ -51,7 +79,8 @@ b5 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b6 = tk.Button(
     text="5",
@@ -60,7 +89,8 @@ b6 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b7 = tk.Button(
     text="6",
@@ -69,7 +99,8 @@ b7 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b8 = tk.Button(
     text="-",
@@ -78,7 +109,8 @@ b8 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'gray'
+    bg= 'gray',
+    command = handle_click
 )
 b9 = tk.Button(
     text="7",
@@ -87,7 +119,8 @@ b9 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b10 = tk.Button(
     text="8",
@@ -96,7 +129,8 @@ b10 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b11 = tk.Button(
     text="9",
@@ -105,7 +139,8 @@ b11 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b12 = tk.Button(
     text="*",
@@ -114,7 +149,8 @@ b12 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'gray'
+    bg= 'gray',
+    command = handle_click
 )
 b13 = tk.Button(
     text=".",
@@ -123,7 +159,8 @@ b13 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'gray'
+    bg= 'gray',
+    command = handle_click
 )
 b14 = tk.Button(
     text="0",
@@ -132,7 +169,8 @@ b14 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'white'
+    bg= 'white',
+    command = handle_click
 )
 b15 = tk.Button(
     text="ans",
@@ -141,7 +179,8 @@ b15 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'orange'
+    bg= 'orange',
+    command = handle_click
 )
 b16 = tk.Button(
     text="/",
@@ -150,16 +189,9 @@ b16 = tk.Button(
     width= 5,
     borderwidth=5,
     relief= tk.RIDGE,
-    bg= 'gray'
+    bg= 'gray',
+    command = handle_click
 )
-
-labelmain = tk.Label(
-    text = 'jekfsef',
-    width= 32,
-    relief= tk.SUNKEN,
-    height= 4
-)
-labelmain.pack()
 
 buttons_dics = {1:b1, 2:b2, 3:b3, 4:b4, 5:b5, 6:b6, 7:b7, 8:b8, 9:b9, 10:b10, 11:b11, 12:b12, 13:b13, 14:b14, 15:b15, 16:b16}
 
