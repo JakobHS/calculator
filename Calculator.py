@@ -36,6 +36,12 @@ labels = ['1', '2', '3', '+',
           '.', '0', 'ans', '/']
 
 for num, text in enumerate(labels):
+    if text == 'ans':
+        colour = 'orange'
+    elif text in '1234567890':
+        colour = 'white'
+    else:
+        colour = 'gray'
     button = tk.Button(
         text=text,
         master = frame,
@@ -43,7 +49,7 @@ for num, text in enumerate(labels):
         width= 5,
         borderwidth=5,
         relief= tk.RIDGE,
-        bg= 'white',
+        bg= colour,
         command=lambda t=text: handle_click(t)
     )
     button.grid(
