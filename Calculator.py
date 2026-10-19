@@ -28,11 +28,54 @@ labelmain = tk.Label(
 )
 labelmain.pack()
 
+def solve(sequ):
+    if '/' in sequ:
+        a = float(sequ[sequ.index('/') -1])
+        b = float(sequ[sequ.index('/') +1])
+        c = a / b
+        sequ[sequ.index('/')] = (str(c))
+        del sequ[sequ.index(str(c)) -1]
+        del sequ[sequ.index(str(c)) +1]
+
+    elif '*' in sequ:
+        a = float(sequ[sequ.index('*') -1])
+        b = float(sequ[sequ.index('*') +1])
+        c = a * b
+        sequ[sequ.index('*')] = (str(c))
+        del sequ[sequ.index(str(c)) -1]
+        del sequ[sequ.index(str(c)) +1]
+
+    elif '-' in sequ:
+        a = float(sequ[sequ.index('-') -1])
+        b = float(sequ[sequ.index('-') +1])
+        c = a - b
+        sequ[sequ.index('-')] = (str(c))
+        del sequ[sequ.index(str(c)) -1]
+        del sequ[sequ.index(str(c)) +1]
+
+    elif '+' in sequ:
+        a = float(sequ[sequ.index('+') -1])
+        b = float(sequ[sequ.index('+') +1])
+        c = a + b
+        sequ[sequ.index('+')] = (str(c))
+        del sequ[sequ.index(str(c)) -1]
+        del sequ[sequ.index(str(c)) +1]
+    return sequence
+
+
+sequence = []
 def handle_click(text):
     if text == 'ans':
-        labelmain['text'] = 'solving...'
+        solve(sequence)
+        labelmain['text'] = sequence
+    elif text in '123456789':
+        labelmain['text'] = labelmain['text'] + text
+        num = (text)
+        sequence.append(num)
     else:
         labelmain['text'] = labelmain['text'] + text
+        equ = text
+        sequence.append(equ)
 
 labels = ['1', '2', '3', '+',
           '4', '5', '6', '-',
