@@ -66,8 +66,9 @@ def solve(sequ):
 sequence = []
 def handle_click(text):
     if text == 'ans':
-        solve(sequence)
-        labelmain['text'] = sequence
+        #solve(sequence)
+        #labelmain['text'] = sequence
+        labelmain['text'] = eval(labelmain['text'])
     elif text in '123456789':
         labelmain['text'] = labelmain['text'] + text
         num = (text)
